@@ -1,0 +1,63 @@
+{
+  "batch": "batch_20261025T054540Z",
+  "created_at_utc": "2026-10-25T05:45:40Z",
+  "outcome": "failed_no_runs",
+  "completed_runs": 0,
+  "attempted_runs": 1,
+  "requested_conditions_priority": [
+    "collusion_steer",
+    "collusion_quarantine",
+    "collusion_placebo",
+    "collusion_silent"
+  ],
+  "attempts": [
+    {
+      "condition": "collusion_steer",
+      "scenario": "vendor",
+      "seed": 0,
+      "model": "poolside/laguna-s-2.1:free",
+      "command": "uv run python run_experiment.py --config results/batches/batch_20261025T054540Z/config.yaml --scenarios vendor --seeds 0 --workers 1 --conditions collusion_steer",
+      "completed_runs": 0,
+      "elapsed_sec": 34.73,
+      "error": "OpenRouterError: OpenRouter call failed after 6 attempts: HTTP 429 free-models-per-day-high-balance (X-RateLimit-Limit=1000, X-RateLimit-Remaining=0, X-RateLimit-Reset=1792972800000)"
+    },
+    {
+      "condition": "collusion_steer",
+      "scenario": "vendor",
+      "seed": 0,
+      "model": "recursive/flint-v1.0:free",
+      "command": "uv run python run_experiment.py --config results/batches/batch_20261025T054540Z/probe_fallback_recursive/config.yaml --scenarios vendor --seeds 0 --workers 1 --conditions collusion_steer",
+      "completed_runs": 0,
+      "elapsed_sec": 34.83,
+      "error": "OpenRouterError: OpenRouter call failed after 6 attempts: HTTP 429 free-models-per-day-high-balance (X-RateLimit-Limit=1000, X-RateLimit-Remaining=0, X-RateLimit-Reset=1792972800000)"
+    }
+  ],
+  "not_attempted": {
+    "conditions": ["collusion_quarantine", "collusion_placebo", "collusion_silent"],
+    "reason": "The 429 is an account-wide free-model daily quota (free_model_daily_requests used=1017, limit=1000, remaining=0), verified by direct probes of all four candidate models; no model or condition can succeed before the reset at 2026-10-26T00:00:00Z. Retrying the remaining arms would only repeat the same failure."
+  },
+  "blocker": {
+    "type": "external_provider_quota",
+    "detail": "OpenRouter account-wide free-model daily request limit exhausted.",
+    "used": 1017,
+    "limit": 1000,
+    "remaining": 0,
+    "resets_at_utc": "2026-10-26T00:00:00Z",
+    "paid_fallback_available": false,
+    "paid_reason": "key limit_usd=0.00, usage_usd=0.00"
+  },
+  "harness_issue": {
+    "where": "run_experiment.py --results <all-error-jsonl> --report report.md",
+    "error": "KeyError: 'condition' at src/collusion_steering/analysis.py:450 in summarize()",
+    "impact": "Cannot regenerate a report for a batch with zero completed runs; no report.md was written by the harness."
+  },
+  "files": {
+    "runs.jsonl": "one error record for vendor__collusion_steer__s0",
+    "runs.metadata.json": "runner dump for the primary attempt",
+    "metadata.json": "verbatim copy of runs.metadata.json",
+    "run.log": "stdout/stderr of the primary attempt",
+    "quota_probe.json": "key usage and direct 429 probes of all four candidate free models",
+    "report_generation.log": "traceback from the failed --results report regeneration",
+    "probe_fallback_recursive/": "second harness attempt with the first fallback model"
+  }
+}

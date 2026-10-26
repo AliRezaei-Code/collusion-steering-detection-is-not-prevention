@@ -1,0 +1,59 @@
+{
+  "quota": {
+    "captured_at_utc": "2026-10-25T05:47:29.463508+00:00",
+    "key_limit_usd": 0,
+    "usage_usd": 0,
+    "free_model_daily_requests": {
+      "used": 1017,
+      "limit": 1000,
+      "remaining": 0
+    },
+    "note": "Account-wide free-model daily cap; resets at 2026-10-26T00:00:00Z (epoch ms 1792972800000)."
+  },
+  "model_probes": [
+    {
+      "model": "poolside/laguna-s-2.1:free",
+      "http_status": 429,
+      "elapsed_sec": 0.11,
+      "error_message": "Rate limit exceeded: free-models-per-day-high-balance. ",
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": "1000",
+        "X-RateLimit-Remaining": "0",
+        "X-RateLimit-Reset": "1792972800000"
+      }
+    },
+    {
+      "model": "recursive/flint-v1.0:free",
+      "http_status": 429,
+      "elapsed_sec": 0.21,
+      "error_message": "Rate limit exceeded: free-models-per-day-high-balance. ",
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": "1000",
+        "X-RateLimit-Remaining": "0",
+        "X-RateLimit-Reset": "1792972800000"
+      }
+    },
+    {
+      "model": "dots-studio/dots-3-note-preview:free",
+      "http_status": 429,
+      "elapsed_sec": 0.13,
+      "error_message": "Rate limit exceeded: free-models-per-day-high-balance. ",
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": "1000",
+        "X-RateLimit-Remaining": "0",
+        "X-RateLimit-Reset": "1792972800000"
+      }
+    },
+    {
+      "model": "nvidia/nemotron-3.5-lightning:free",
+      "http_status": 429,
+      "elapsed_sec": 0.12,
+      "error_message": "Rate limit exceeded: free-models-per-day-high-balance. ",
+      "rate_limit_headers": {
+        "X-RateLimit-Limit": "1000",
+        "X-RateLimit-Remaining": "0",
+        "X-RateLimit-Reset": "1792972800000"
+      }
+    }
+  ]
+}

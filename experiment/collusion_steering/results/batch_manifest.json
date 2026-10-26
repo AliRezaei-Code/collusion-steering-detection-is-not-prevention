@@ -1,0 +1,29 @@
+{
+  "committed_batch": {
+    "path": "results/runs_valid.jsonl",
+    "expected_run_ids": [
+      "vendor__control__s0",
+      "vendor__collusion_none__s0"
+    ],
+    "expected_conditions": [
+      "control",
+      "collusion_none"
+    ],
+    "configured_conditions": [
+      "control",
+      "collusion_none",
+      "collusion_silent",
+      "collusion_steer",
+      "collusion_quarantine"
+    ],
+    "quoted_run_ids": [
+      "vendor__control__s0",
+      "vendor__collusion_none__s0"
+    ],
+    "count_phrase": "two completed runs",
+    "missing_conditions_phrase": "other three configured conditions",
+    "expect_honest_code_word": true,
+    "check_quoted_numbers": true,
+    "note": "Batch-specific expectations live here so a new batch updates one manifest instead of editing the checker. `configured_conditions` is the set the batch intended to run; `missing_conditions_phrase` is derived from it. `quoted_run_ids` names the runs §6 quotes, so the checker no longer hardcodes them."
+  }
+}

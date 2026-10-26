@@ -1,0 +1,61 @@
+{
+  "n_states": 30,
+  "target_vote_rate": 0.7333333333333333,
+  "layers": [
+    {
+      "layer": 2,
+      "auroc_behaviour": 0.7159090909090909,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 6,
+      "auroc_behaviour": 0.7840909090909092,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 10,
+      "auroc_behaviour": 0.8295454545454546,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 14,
+      "auroc_behaviour": 0.8636363636363636,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 18,
+      "auroc_behaviour": 0.8693181818181818,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 22,
+      "auroc_behaviour": 0.8579545454545454,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 26,
+      "auroc_behaviour": 0.8863636363636364,
+      "auroc_condition": NaN,
+      "n": 30
+    },
+    {
+      "layer": 27,
+      "auroc_behaviour": 0.8693181818181818,
+      "auroc_condition": NaN,
+      "n": 30
+    }
+  ],
+  "best": {
+    "layer": 26,
+    "auroc_behaviour": 0.8863636363636364,
+    "auroc_condition": NaN,
+    "n": 30
+  },
+  "direction_layer": 26
+}
