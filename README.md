@@ -11,8 +11,9 @@ direction changes nothing.
 ## Contents
 
 - `paper/` — the submission PDF (4-page body, appendices), the markdown source, the deck, and `make_deck.py`.
-- `experiment/` — the harness (`src/collusion_steering/`), tests, runner scripts, and every committed result grid
-  under `results/`.
+- `experiment/` — the full harness workspace: `src/collusion_steering/` (agents, monitor, interventions, MLX client),
+  `tests/`, `scripts/` (every runner and the activation study), and all committed result grids under `results/`,
+  plus the `liquid_trial/` side experiment.
 - `skills/` — the prose rules used for the paper.
 
 ## Result grids

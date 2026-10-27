@@ -1,0 +1,6 @@
+.venv/
+.venv-mlx/
+.opencode-home/
+__pycache__/
+.pytest_cache/
+*.pyc
