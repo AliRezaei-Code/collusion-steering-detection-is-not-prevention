@@ -38,7 +38,7 @@ that never happens (Nakamura et al., 2026); Orbit finds per-action monitoring gi
 (arXiv:2609.33102v1). Activation steering is also mature, from representation engineering (Zou et al., 2023) to
 inference-time instruction-hierarchy control (Zeng et al., 2026). What is missing is the join: nobody holds the notice
 fixed while varying the monitor and the target, and nobody reports what happens when the direction behind the vote is
-ablated. Appendix J lists the full map.
+ablated. Appendix H lists the full map.
 
 ## 3. Methods
 
@@ -494,35 +494,3 @@ with the number of defectors as a secondary count.
 monitor is an oracle; a deployable monitor would sometimes flag the honest agent, and the pilot does not price that
 false positive. Notice lengths: steer 44 words / 286 characters, placebo 41 / 264, monitor-only 41 / 248, honesty-only
 48 / 298, bare honesty 12 / 73. The near-match is close, not exact; the residual is directive content.
-
-
-## Appendix J. Extended related work
-
-**Detection.** NARCBench and HELIOS supply the activation-probe and group-statistic baselines this paper builds on
-(Rose et al., 2026). Colosseum separates specified from empirical alignment and shows a text judge can score planning
-that never becomes action (Nakamura et al., 2026); Orbit finds per-action monitoring gives no measurable protection
-against collusion (Hagag et al., 2026). Audit the Whisper and Secret Collusion cover steganographic carriers and
-intervention stress tests (Tailor, 2025; Motwani et al., 2024). A cluster of work studies what a monitored coalition
-does about it: evaluation awareness (Das et al., 2026), monitoring that degrades when agents are told they are watched
-(Kale et al., 2025), agents inferring CoT monitoring from blocking feedback (Jiralerspong et al., 2026), hand-written
-attacks against monitor blind spots (Najt et al., 2026), how much context a monitor should see (Arike et al., 2026),
-coordinated sabotage split across agents (Radev et al., 2026), say-do divergence in repeated games (Shi et al., 2026a),
-emergent collusion over long horizons (Shi et al., 2026b), structured action-trace monitoring (Nguyen et al., 2026),
-collusive-attack modelling (Tao et al., 2026), and the control framing that treats intentional subversion as in scope
-(Greenblatt et al., 2023).
-
-**Markets.** Fish et al. (2024) established supracompetitive pricing from innocuous prompt cues; Agrawal et al. (2025)
-run the double auction with communication, oversight, and message caps; Keppo et al. (2026) and Aharon et al. (2026)
-study the fragility and the tacit form of the same behaviour; Xu et al. (2026) show price-level audits are blind by
-construction, and Dhanda (2026) shows a price cap can act as a focal point. Collina et al. (2025) and Liu et al.
-(2026) cover economic and institutional interventions. Bracale Syrnikov et al. (2026) govern Cournot collusion with
-public governance graphs, the strongest non-activation baseline. Bonjour et al. (2022) supply the information-theoretic
-detection statistic, and Berger et al. (2025) the antitrust plus-factor standard that motivates separating attempt from
-agreement.
-
-**Steering.** Representation engineering (Zou et al., 2023) and activation addition (Turner et al., 2023) are the
-ancestors of any intervention here; AutoSteer (Wu et al., 2025) automates layer selection; Huh (2026), Kaur et al.
-(2026), Shen et al. (2026), and Fan et al. (2026) apply steering to multi-agent decision-making, latent communication,
-goal drift, and social simulation respectively; Ong et al. (2026) forecast the side effects of doing so; Rippin et al.
-(2026) and Zeng and Rudzicz (2026) cover tool-based and voluntary secret coordination. The instruction-hierarchy line
-(Zeng et al., 2026) is the one this paper's §4.3 result speaks to directly.
